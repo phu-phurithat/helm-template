@@ -32,6 +32,7 @@ spec:
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      terminationGracePeriodSeconds: 5
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.containerSecurityContext }}
