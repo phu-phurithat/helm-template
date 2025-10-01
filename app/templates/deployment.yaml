@@ -44,6 +44,7 @@ spec:
           ports:
             - name: grpc
               containerPort: {{ .Values.service.port }}
+              protocol: TCP
           env:
             {{- range .Values.env }}
             - name: {{ .name }}
